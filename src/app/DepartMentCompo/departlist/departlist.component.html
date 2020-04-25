@@ -1,0 +1,14 @@
+<h1>department List</h1>
+
+<ul *ngFor="let item of deptList;let i = index">
+    <li >{{item.id}} <br>
+        {{item.name}} </li>
+    <button (click)="onDelete(i)">Delete</button><br>
+    <button (click)="showUpdate(item)">update</button>
+
+</ul>
+
+
+<app-deparadd></app-deparadd>
+
+<app-departupdate *ngIf="component==1"></app-departupdate>
